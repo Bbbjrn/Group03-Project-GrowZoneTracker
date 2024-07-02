@@ -14,6 +14,7 @@
 | Markdown  |  |
 | VS Code   |  |   
 | Github    |  |   
+| Bootstrap |  |
 
 ## Table of Contents: 
 
@@ -32,9 +33,9 @@
 
 ## User Story
 
-As a user <br>
+As a user, <br>
 I WANT a website where I can search for different plants in Maricopa County, Arizona, <br>
-SO THAT I can find what plants I'm able to grow in this particular geographical zone during time of year, and see photos and information on the plants.
+SO THAT I can find what plants I'm able to grow best in this particular geographical zone during this time of year, and see photos and information on the plants.
 
 ## Acceptance Criteria
 
@@ -57,8 +58,8 @@ The user can click the deployed link to explore the website.
 ## Contributors
 
 * Heather Serrano (magneticsoul7) <br>
-* Lauren Coates ( ) <br>
-* Victor Roman ( ) <br>
+* Lauren Coates (Lcoates5) <br>
+* Victor Roman (Romantech91) <br>
 * Bjorn Johansson (Bbbjrn)
 
 ## License
