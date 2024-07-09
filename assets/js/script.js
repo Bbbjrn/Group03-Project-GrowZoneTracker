@@ -218,11 +218,11 @@ function showHardinessErrorModal() {
 // Event listener for hardiness button
 
 document.getElementById('hardinessButton').addEventListener('click', () => {
-    if (hardinessInput === "0") {
+   
+    const hardinessInput = document.getElementById('hardinessZone').value;
+    if (!hardinessInput || hardinessInput === "0") {
         showHardinessErrorModal();
         return;
-    } else {
-    const hardinessInput = document.getElementById('hardinessZone').value;
-    fetchAndDisplayHardinessList(hardinessInput);
     }
+    fetchAndDisplayHardinessList(hardinessInput);
 });
