@@ -26,6 +26,11 @@ async function fetchAndDisplaySpeciesList(searchQuery) {
         redirect: 'follow'
     };
 
+    if (!searchQuery) {
+        showErrorModal();
+        return;
+    }
+
     const url = `https://perenual.com/api/species-list?key=sk-YLTu6685827296e1c6133&q=${searchQuery}`;
 
     try {
