@@ -1,0 +1,77 @@
+# Set the default behavior to automatically normalize line endings.
+* text=auto
+
+# Explicitly declare text files to be normalized (convert CRLF to LF).
+*.c text
+*.h text
+*.cpp text
+*.hpp text
+*.js text
+*.css text
+*.html text
+*.md text
+*.json text
+*.xml text
+*.yml text
+*.yaml text
+*.py text
+*.rb text
+*.php text
+*.sh text eol=lf
+
+# Ensure all shell scripts have LF line endings
+*.sh text eol=lf
+
+# Ensure all batch scripts have CRLF line endings
+*.bat text eol=crlf
+
+# Binary files should be treated as binary and not converted.
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.ico binary
+*.zip binary
+*.gz binary
+*.tar binary
+*.tgz binary
+*.rar binary
+*.7z binary
+*.exe binary
+*.dll binary
+*.so binary
+*.pdf binary
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+
+# Ensure all HTML files have LF line endings
+*.html text eol=lf
+
+# Ensure all CSS files have LF line endings
+*.css text eol=lf
+
+# Ensure all JavaScript files have LF line endings
+*.js text eol=lf
+
+# Ensure all JSON files have LF line endings
+*.json text eol=lf
+
+# Ensure all Markdown files have LF line endings
+*.md text eol=lf
+
+# Ensure all YAML files have LF line endings
+*.yaml text eol=lf
+*.yml text eol=lf
+
+# Ensure all XML files have LF line endings
+*.xml text eol=lf
+
+# Ensure all Python files have LF line endings
+*.py text eol=lf
+
+# Ensure all Ruby files have LF line endings
+*.rb text eol=lf
+
+# Ensure all PHP files have LF line endings
+*.php text eol=lf
