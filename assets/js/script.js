@@ -46,6 +46,8 @@ async function fetchAndDisplaySpeciesList(searchQuery) {
 
   const url = `https://perenual.com/api/species-list?key=sk-YLTu6685827296e1c6133&q=${searchQuery}`;
 
+  const url = `https://perenual.com/api/species-list?key=sk-YLTu6685827296e1c6133&q=${searchQuery}`;
+
   try {
     const response = await fetch(url, requestOptions);
     const result = await response.json();
