@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sagegreen {
+    background-color: rgb(75, 151, 123);
+}
+
+
+main {
+    position: relative;
+}
+
+.favorites-element {
+    /* position: absolute; */
+    /* top: 50%; */
+}
