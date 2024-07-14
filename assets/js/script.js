@@ -1,34 +1,16 @@
-// API access key: sk-YLTu6685827296e1c6133
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Console Log Functions:
+// Fetch API / Async Functions:
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Directions for API access
-const requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
-};
-
-// Fetch and Log species based on search query
+// Get search query value
 const searchQuery = document.getElementById('searchQuery').value;
 
-fetch(`https://perenual.com/api/species-list?key=sk-YLTu6685827296e1c6133`, requestOptions)
-    .then(response => response.json())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
-
-// Fetch and Log species based on Hardiness 
+// Get hardiness zone value
 const hardinessInput = document.getElementById('hardinessZone').value;
-
-fetch(`https://perenual.com/api/species-list?key=sk-YLTu6685827296e1c6133&hardiness=${hardinessInput}`, requestOptions)
-    .then(response => response.json())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
-
 
 // Asynch Function to fetch species list based on search query
 async function fetchAndDisplaySpeciesList(searchQuery) {
+
     const requestOptions = {
         method: 'GET',
         redirect: 'follow'
@@ -44,8 +26,7 @@ async function fetchAndDisplaySpeciesList(searchQuery) {
     try {
         const response = await fetch(url, requestOptions);
         const result = await response.json();
-
-
+        
         const speciesArray = result.data;
 
         displaySearchResults(speciesArray);
@@ -55,9 +36,9 @@ async function fetchAndDisplaySpeciesList(searchQuery) {
     }
 }
 
-
 // Async Function to fetch species list based on Hardiness Zone value (1-13)
 async function fetchAndDisplayHardinessList(hardinessInput) {
+
     const requestOptions = {
         method: 'GET',
         redirect: 'follow'
@@ -68,7 +49,7 @@ async function fetchAndDisplayHardinessList(hardinessInput) {
     try {
         const response = await fetch(url, requestOptions);
         const result = await response.json();
-
+        
         const speciesArray = result.data;
 
         displayHardinessResults(speciesArray);
@@ -78,11 +59,12 @@ async function fetchAndDisplayHardinessList(hardinessInput) {
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Display and Dynamic Generation Functions:
+// Dynamic Generation Functions:
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Function to display search results
 const displaySearchResults = (results) => {
+
     const searchResultsContainer = document.getElementById('search-results');
     searchResultsContainer.innerHTML = '<h2>Search Results</h2>';
 
@@ -107,8 +89,10 @@ const displaySearchResults = (results) => {
     searchResultsContainer.appendChild(row);
 };
 
+
 // Function to create HTML card for species
 const createSpeciesCard = (species) => {
+
     const card = document.createElement('div');
     card.classList.add('card', 'h-100');
 
@@ -175,14 +159,14 @@ document.addEventListener('DOMContentLoaded', () => {
 function displayHardinessResults(results) {
     const plantAccordion = document.getElementById('plantAccordion');
     plantAccordion.innerHTML = '';
-
+    
     results.forEach((species, index) => {
         const accordionItem = document.createElement('div');
         accordionItem.classList.add('accordion-item');
-
+    
         const headerId = `heading${index}`;
         const collapseId = `collapse${index}`;
-
+    
         accordionItem.innerHTML = `
             <h2 class="accordion-header" id="${headerId}">
                 <button class="accordion-button ${index === 0 ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#${collapseId}" aria-expanded="${index === 0 ? 'true' : 'false'}" aria-controls="${collapseId}">
@@ -213,7 +197,7 @@ function displayHardinessResults(results) {
                 </div>
             </div>
         `;
-
+    
         plantAccordion.appendChild(accordionItem);
 
         // Add event listener for the checkbox
@@ -250,41 +234,41 @@ const removeFromFavorites = (species) => {
 function displayFavorites() {
     const favoritesContainer = document.getElementById('favorites');
     favoritesContainer.innerHTML = '';
-
+    
     if (favorites.length === 0) {
         favoritesContainer.innerHTML += '<p>No favorites added yet.</p>';
         return;
     }
-
+    
     favorites.forEach((species, index) => {
         const favoriteItem = document.createElement('div');
         favoriteItem.classList.add('card', 'mb-3');
-
+    
         favoriteItem.innerHTML = `
-          <div class="row g-0">
-              <div class="col-md-4">
-                  ${species.default_image && species.default_image.medium_url ? `<img src="${species.default_image.medium_url}" alt="${species.common_name}" class="img-fluid rounded-start">` : '<img src="https://via.placeholder.com/150" alt="No image available" class="img-fluid rounded-start">'}
-              </div>
-              <div class="col-md-8">
-                  <div class="card-body">
-                      <h5 class="card-title">${species.common_name}</h5>
-                      <p class="card-text">
-                          <strong>Scientific Name:</strong> <em>${species.scientific_name.length > 0 ? species.scientific_name.join(', ') : 'N/A'}</em> <br>
-                          <strong>Other Names:</strong> ${species.other_name.length > 0 ? species.other_name.join(', ') : 'N/A'} <br>
-                          <strong>Cycle:</strong> ${species.cycle || 'N/A'} <br>
-                          <strong>Sunlight:</strong> ${species.sunlight.length > 0 ? species.sunlight.join(', ') : 'N/A'} <br>
-                          <strong>Watering:</strong> ${species.watering || 'N/A'} <br>
-                      </p>
-                      <!-- Remove from favorites checkbox -->
-                      <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="removeFavorite${index}" checked>
-                          <label class="form-check-label" for="removeFavorite${index}">Remove from Favorites</label>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      `;
-
+            <div class="row g-0">
+                <div class="col-md-4">
+                    ${species.default_image && species.default_image.medium_url ? `<img src="${species.default_image.medium_url}" alt="${species.common_name}" class="img-fluid rounded-start">` : '<img src="https://via.placeholder.com/150" alt="No image available" class="img-fluid rounded-start">'}
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">${species.common_name}</h5>
+                        <p class="card-text">
+                            <strong>Scientific Name:</strong> <em>${species.scientific_name.length > 0 ? species.scientific_name.join(', ') : 'N/A'}</em> <br>
+                            <strong>Other Names:</strong> ${species.other_name.length > 0 ? species.other_name.join(', ') : 'N/A'} <br>
+                            <strong>Cycle:</strong> ${species.cycle || 'N/A'} <br>
+                            <strong>Sunlight:</strong> ${species.sunlight.length > 0 ? species.sunlight.join(', ') : 'N/A'} <br>
+                            <strong>Watering:</strong> ${species.watering || 'N/A'} <br>
+                        </p>
+                        <!-- Remove from favorites checkbox -->
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="removeFavorite${index}" checked>
+                            <label class="form-check-label" for="removeFavorite${index}">Remove from Favorites</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    
         favoritesContainer.appendChild(favoriteItem);
 
         // Add event listener for the remove checkbox
@@ -311,10 +295,10 @@ function showHardinessErrorModal() {
     const hardinessErrorModal = new bootstrap.Modal(document.getElementById('hardinessErrorModal'));
     hardinessErrorModal.show();
 }
-
+    
 // Event listener for hardiness button
 document.getElementById('hardinessButton').addEventListener('click', () => {
-
+   
     const hardinessInput = document.getElementById('hardinessZone').value;
     if (!hardinessInput || hardinessInput === "0") {
         showHardinessErrorModal();
@@ -329,36 +313,6 @@ document.getElementById('searchButton').addEventListener('click', () => {
     fetchAndDisplaySpeciesList(searchQuery);
 });
 
-// Function for light dark mode toggle
-document.getElementById('flexSwitchCheck').addEventListener('change', function () {
-    lightDarkMode();
-    localStorage.setItem('dark-mode', this.checked);
-});
-
-function lightDarkMode() {
-    let element = document.body;
-    element.classList.toggle('dark-mode');
-
-    // Toggle dark mode for all relevant sections
-    let sections = document.querySelectorAll('.navbar, .nav-link, .navbar.bg-success, .card, .btn, .form-check-input, .accordion-item, .modal-content');
-    sections.forEach(section => {
-        section.classList.toggle('dark-mode');
-    });
-}
-
-// Initialize dark mode based on local storage
-document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('dark-mode') === 'true') {
-        document.body.classList.add('dark-mode');
-        document.getElementById('flexSwitchCheck').checked = true;
-
-        // Ensure all relevant sections are in dark mode
-        let sections = document.querySelectorAll('.navbar, .nav-link, .navbar.bg-success, .card, .btn, .form-check-input, .accordion-item, .modal-content');
-        sections.forEach(section => {
-            section.classList.add('dark-mode');
-        });
-    }
-});
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Local Storage Functionality:
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -373,5 +327,3 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchAndDisplayHardinessList('1,2,3,4,5,6,7,8,9,10,11,12,13');
     displayFavorites();
 });
-
-
