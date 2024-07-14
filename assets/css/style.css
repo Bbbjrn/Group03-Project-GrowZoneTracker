@@ -1,16 +1,16 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 .sagegreen {
     background-color: rgb(75, 151, 123);
 }
 
-main {
+/* main {
     position: relative;
-}
+} */
 
 .favorites-element {
     /* position: absolute; */
@@ -18,5 +18,16 @@ main {
 }
 
 .hardiness-map {
+max-width: 1000px;
+max-height: 1000px;
+}
 
+.footer {
+    background-color: rgb(75, 151, 123);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
