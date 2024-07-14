@@ -21,13 +21,3 @@
 max-width: 1000px;
 max-height: 1000px;
 }
-
-.footer {
-    background-color: rgb(75, 151, 123);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
