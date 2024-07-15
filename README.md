@@ -57,18 +57,26 @@ N/A
 
 ## Usage
 
-The user can click the deployed link to explore the website.
+To use this website, click on the deployed link at the bottom of this ReadMe file. Then, from the Home page, you can either use the search bar at the top in the navigation section of the website to search for a specific plant or you can use the hardiness zone dropdown menu in the body of the website, located below the navigation menu, to select your hardiness zone and search for plants in that specific zone. 
+
+Any plant that you see on the website, you will notice a checkbox right below it. Click this checkbox if you wish to add that plant to your Favorites. Then when you come back to the website later, simply click on the Favorites button in the navigation menu at the top to see all the plants that you saved to your favorites.
+
+There is also a toggle button at the top in the navigation menu that you can click to switch between day mode and night mode. 
+
+Then if you click on Hardiness Map in the navigation menu, it will take you to another page in the wbsite that shows you which hardiness zone you are in based on your geographical location in the U.S.A. 
+
+Lastly, there is a Learn More page in the website that provides links to more resources about plants.
 
 ## Wireframe
 
-
+![alt text](assets/images/Wireframe.png)
 
 ## Contributors
 
-* Heather Serrano (magneticsoul7) <br>
-* Lauren Coates (Lcoates5) <br>
-* Victor Roman (Romantech91) <br>
-* Bjorn Johansson (Bbbjrn)
+* Heather Serrano (magneticsoul7) https://github.com/MagneticSoul7 <br>
+* Lauren Coates (Lcoates5) https://github.com/Lcoates5 <br>
+* Victor Roman (Romantech91) https://github.com/Romantech91 <br>
+* Bjorn Johansson (Bbbjrn) https://github.com/Bbbjrn 
 
 ## License
 
@@ -82,3 +90,4 @@ MIT License.
 
 ## Deployed Link 
 
+https://bbbjrn.github.io/Group03-Project/ 
