@@ -69,5 +69,5 @@ Gardening in Arizona requires specific knowledge about which plants thrive in di
 9. **Persistent Data**
    - **Given**: The user adds a plant to their favorites.
    - **When**: The user returns to the website.
-   - **Then**: They will see all of their saved favorite plants.
+   - **Then**: The plant should still be listed in their favorites due to data persistence via local storage.
 
