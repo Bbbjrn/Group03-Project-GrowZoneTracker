@@ -1,7 +1,23 @@
 
+# Grow Zone Tracker
+
 Gardening in Arizona requires specific knowledge about which plants thrive in different hardiness zones and at various times of the year. By providing an easy-to-use tool that offers personalized planting recommendations, gardeners can make informed decisions that lead to healthier plants and more bountiful gardens.
 
-#### Acceptance Criteria:
+
+## User Story
+
+**AS A USER** in the U.S.A,
+<br>
+<br>
+
+**I WANT** a website where I can search for different plants either by their name and/or by hardiness zones and even save them to my favorites, 
+<br>
+<br> 
+
+**SO THAT** I can get personalized planting recommendations on what plants I'm able to grow best in my geaographical location based on my hardiness zone and also see photos and information on the plants.
+
+
+## Acceptance Criteria
 
 1. **Home Page**
 
@@ -53,4 +69,5 @@ Gardening in Arizona requires specific knowledge about which plants thrive in di
 9. **Persistent Data**
    - **Given**: The user adds a plant to their favorites.
    - **When**: The user returns to the website.
+   - **Then**: They will see all of their saved favorite plants.
 
