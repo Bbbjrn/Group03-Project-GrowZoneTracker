@@ -1,47 +1,55 @@
-# Plant Zone Website (Group03-Project) 
+
+# Grow Zone Tracker (Project #1 - Group #3) 
 --------
 
 ## Description
 
+Gardening in Arizona requires specific knowledge about which plants thrive in different hardiness zones and at various times of the year. By providing an easy-to-use tool that offers personalized planting recommendations, gardeners can make informed decisions that lead to healthier plants and more bountiful gardens.
 
 ## Technologies Used
 
 |        |  | 
 | ------------- |:-------------:| 
-| HTML      |  | 
-| CSS       |  |   
-| Git       |  |   
-| Markdown  |  |
-| VS Code   |  |   
-| Github    |  |   
-| Bootstrap |  |
+| HTML          |  | 
+| Bootstrap     |  |   
+| Custom CSS    |  |   
+| Javascript    |  |
+| Markdown      |  |
+| VS Code       |  |   
+| Git           |  |   
+| Git Copilot   |  |
+| Github        |  |
+| Public API    |  |
 
 ## Table of Contents: 
 
-1. Description <br>
-2. Technologies Used <br>
-3. Table of Contents <br>
-4. User Story <br>
-5. Acceptance Criteria <br>
-6. Installation <br>
-7. Usage <br>
-8. Mockup <br>
-9. Contributors <br>
-10. License <br>
-11. Author Info <br>
-12. Deployed Link <br>
+1. Title and Project Number <br>
+2. Description <br>
+3. Technologies Used <br>
+4. Table of Contents <br>
+5. User Story <br>
+6. Acceptance Criteria <br>
+7. Installation <br>
+8. Usage <br>
+9. Mockup <br>
+10. Contributors <br>
+11. License <br>
+12. Author Info <br>
+13. Deployed Link <br>
 
 ## User Story
 
-As a user, <br>
-I WANT a website where I can search for different plants in Maricopa County, Arizona, <br>
-SO THAT I can find what plants I'm able to grow best in this particular geographical zone during this time of year, and see photos and information on the plants.
+AS A USER in the U.S.A., 
+<br>
+<br>
+I WANT a website where I can search for different plants either by their name and/or by hardiness zones and even save them to my favorites, 
+<br>
+<br>
+SO THAT I can get personalized planting recommendations on what plants I'm able to grow best in my geaographical location based on my hardiness zone and also see photos and information on the plants.
 
 ## Acceptance Criteria
 
-"GIVEN a webpage  <br>
-WHEN I  <br>
-THEN I find 
+See USERSTORY.md file for Acceptance Criteria. 
 
 ## Installation 
 
