@@ -90,4 +90,4 @@ MIT License.
 
 ## Deployed Link 
 
-https://bbbjrn.github.io/Group03-Project/ 
+https://bbbjrn.github.io/Group03-Project-GrowZoneTracker/
